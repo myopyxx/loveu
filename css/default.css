@@ -19,3 +19,50 @@
 #copyright a{color:#666}
 #icon{font-size: 48px;color: red;margin: 50 px; align-content: center;}
 #heartspan{align-content: center;text-align: center;margin: 20px;}
+
+/* Отдельные слои: фон с эмодзи и основное содержимое */
+body {
+    isolation: isolate;
+}
+
+#floating-emojis {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+}
+
+#mainDiv {
+    position: relative;
+    z-index: 1;
+}
+
+/* Плавающие сердечки и медведи */
+#floating-emojis .floating-emoji {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 32px;
+    line-height: 1;
+    opacity: 0.5;
+    animation: loveu-emoji-float 15s linear infinite;
+}
+
+@keyframes loveu-emoji-float {
+    from {
+        transform: translate(0, calc(100vh + 60px));
+    }
+
+    to {
+        transform: translate(50px, -100px);
+    }
+}
+
+/* Если пользователь отключил анимации в настройках устройства */
+@media (prefers-reduced-motion: reduce) {
+    #floating-emojis {
+        display: none;
+    }
+}
