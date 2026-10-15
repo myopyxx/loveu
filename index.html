@@ -15,7 +15,7 @@
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,21 +26,21 @@
 			<span class="comments">/**</span><br />
 			<span class="space"/><span class="comments">* LOVE CODE</span><br />
 			<span class="space"/><span class="comments">*/</span><br />
-			привета<br />
-			я делаю впервые такое и надеюсь что у тебя все открылось;<br />
+			<span class="comments">привета</span><br />
+			<span class="comments">я делаю впервые такое и надеюсь что у тебя все открылось;</span><br />
 			<span class="comments">// этот сайт лишь один процент того что я хочу сказать и показать</span><br />
-			<span class="comments">// наверное я начну с того что ты просто прелесть</span><br />
+			наверное я начну с того что ты просто прелесть<br />
 			твой голос лучшее что я слышал за всю свою жизнь;<br />
 			ты превращаешь обычные дни в маленькие чудеса;<br />
 			ты самая главная причина просыпаться по утрам;<br />
 			и засыпать с улыбкой, думая о тебе;<br />
 			с тобой я чувствую себя дома;<br />
 			где бы мы ни были;<br />
-			этот таймер имеет бесконечный отсчет от нашего первого контакта;<br />
-			и он уже никогда не остановится;<br />
+			<span class="comments">// этот таймер имеет бесконечный отсчет от нашего первого контакта;</span><br />
+			<span class="comments">// и он уже никогда не остановится;</span><br />
 			<br>
 			<br>
-			я хочу сказать тебе самое главное, диана:<br />
+			я хочу сказать тебе самое главное, <span style="font-family: 'Montserrat', sans-serif; font-style: italic;">диана</span>:<br />
 			я люблю тебя и всегда буду с тобой ❤️;<br />
 			<br>
 			<br>
@@ -54,12 +54,12 @@
 			<canvas id="garden"></canvas>
 			<div id="words">
 				<div id="messages">
-					диана, мы вместе уже
+					<span style="font-family: 'Montserrat', sans-serif; font-weight: 700;"><span style="font-style: italic;">диана</span>, мы вместе уже</span>
 					<div id="elapseClock"></div>
 				</div>
-				<div id="loveu">
+				<div id="loveu" style="font-family: 'Montserrat', sans-serif; font-weight: 400;">
 					люблю<br/>
-					<div class="signature">- твой никита</div>
+					<div class="signature" style="font-family: 'Montserrat', sans-serif; font-style: italic;">- твой никита</div>
 				</div>
 			</div>
 		</div>
@@ -79,7 +79,7 @@ together.setMilliseconds(0);
 if (!document.createElement('canvas').getContext) {
 	var msg = document.createElement("div");
 	msg.id = "errorMsg";
-	msg.innerHTML = "Твой браузер не поддерживает HTML5!<br/>Открой страницу в современном браузере.";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
 	document.body.appendChild(msg);
 	$("#code").css("display", "none")
 	$("#copyright").css("position", "absolute");
